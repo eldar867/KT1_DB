@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastify Client</title>
+    <style>
+        body { font-family: sans-serif; padding: 50px; text-align: center; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
 
+    <h1>Тест сервера Fastify</h1>
+    
+    <!-- Кнопка по заданию -->
+    <button id="apiBtn">Сделать запрос на АПИ</button>
+
+    <script>
+        const button = document.getElementById('apiBtn');
+
+        button.addEventListener('click', async () => {
+            try {
+                // Отправляем запрос на эндпоинт /api
+                const response = await fetch('/api');
+                
+                // Получаем данные (JSON)
+                const data = await response.json();
+
+                // Выводим сообщение в консоль, если запрос успешен
+                if (response.ok) {
+                    console.log(data.message); 
+                }
+            } catch (error) {
+                console.error('Ошибка при выполнении запроса:', error);
+            }
+        });
+    </script>
+</body>
+</html>
