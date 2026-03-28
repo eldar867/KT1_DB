@@ -13,7 +13,6 @@
 
     <h1>Тест сервера Fastify</h1>
     
-    <!-- Кнопка по заданию -->
     <button id="apiBtn">Сделать запрос на АПИ</button>
 
     <script>
@@ -21,13 +20,8 @@
 
         button.addEventListener('click', async () => {
             try {
-                // Отправляем запрос на эндпоинт /api
                 const response = await fetch('/api');
-                
-                // Получаем данные (JSON)
                 const data = await response.json();
-
-                // Выводим сообщение в консоль, если запрос успешен
                 if (response.ok) {
                     console.log(data.message); 
                 }
