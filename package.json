@@ -1,1 +1,13 @@
-
+{
+  "name": "fastify-static-example",
+  "version": "1.0.0",
+  "description": "Пример сервера на Fastify со статикой",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@fastify/static": "^7.0.4",
+    "fastify": "^4.28.1"
+  }
+}
