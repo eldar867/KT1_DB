@@ -10,14 +10,10 @@
     </style>
 </head>
 <body>
-
     <h1>Тест сервера Fastify</h1>
-    
     <button id="apiBtn">Сделать запрос на АПИ</button>
-
     <script>
         const button = document.getElementById('apiBtn');
-
         button.addEventListener('click', async () => {
             try {
                 const response = await fetch('/api');
